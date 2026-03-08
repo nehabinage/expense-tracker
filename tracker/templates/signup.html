@@ -2,8 +2,16 @@
 <html>
 <head>
     <title>Sign Up</title>
+    <style>
+        body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f4; }
+        .signup-container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; }
+        h2 { text-align: center; }
+        input { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #04AA6D; color: white; border: none; cursor: pointer;  }
+    </style>
 </head>
 <body>
+    <div class="signup-container">
     <h2>Sign Up</h2>
     {% if error %}
         <p style="color:red">{{ error }}</p>
@@ -15,5 +23,6 @@
         <button type="submit">Sign Up</button>
     </form>
     <p>Already have an account? <a href="/accounts/login/">Login</a></p>
+    </div>
 </body>
 </html>
